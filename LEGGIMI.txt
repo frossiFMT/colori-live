@@ -1,0 +1,46 @@
+COLORI LIVE - come metterla sull'iPhone
+=======================================
+
+L'app è una web app: per usare la telecamera dal vivo deve essere aperta
+da un indirizzo https. Il modo più semplice e gratuito è GitHub Pages.
+
+1) PUBBLICARLA (una volta sola, dal computer)
+   - Crea un account gratuito su https://github.com (se non ce l'hai).
+   - In alto a destra: "+" > "New repository".
+     Nome: colori-live  - Visibilità: Public - "Create repository".
+   - Nella pagina del repository clicca "uploading an existing file".
+   - Trascina TUTTO il contenuto di questa cartella (index.html,
+     manifest.json, sw.js e le cartelle "mp" e "icons"), poi "Commit changes".
+   - Vai su Settings > Pages. In "Branch" scegli "main" e cartella "/ (root)",
+     poi "Save".
+   - Dopo 1-2 minuti l'app è online su:
+       https://TUO-NOME-UTENTE.github.io/colori-live/
+
+2) INSTALLARLA SULL'IPHONE
+   - Apri quell'indirizzo con SAFARI (non Chrome).
+   - Tocca il pulsante Condividi (quadrato con la freccia) >
+     "Aggiungi alla schermata Home" > "Aggiungi".
+   - Apri "Colori Live" dalla Home, tocca "Avvia telecamera" e consenti
+     l'accesso alla fotocamera.
+   - La prima apertura scarica il modello (circa 18 MB); dopo funziona
+     anche senza rete.
+
+3) USO
+   - Inquadra una persona intera, dalla testa ai piedi.
+   - Sul video compaiono le zone (giallo = maglia, azzurro = pantaloni,
+     rosa = scarpe) con il nome del colore; in basso il riepilogo.
+   - "Cambia camera" passa alla fotocamera frontale, "Blocca" congela
+     l'immagine per leggere con calma.
+
+NOTE
+   - Tutto viene elaborato sul telefono: niente viene inviato in rete.
+   - Con luce gialla/artificiale i colori chiari tendono al beige.
+   - Se cambi i file, aumenta il numero in sw.js (colori-live-v1 -> v2)
+     altrimenti l'iPhone continua a usare la versione in cache.
+
+CONTENUTO
+   index.html     l'app (interfaccia, analisi colori)
+   manifest.json  nome e icona per l'installazione
+   sw.js          cache per il funzionamento offline
+   icons/         icone
+   mp/            modello MediaPipe Pose (Google, licenza Apache 2.0)
